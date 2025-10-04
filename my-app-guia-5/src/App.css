@@ -1,42 +1,69 @@
+body {
+  font-family: sans-serif; /* Fuente sencilla */
+  background-color: #f4f4f4; 
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 20px 20px 20px;
+  width: 100%;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 25px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* --- Contenedor list --- */
+.scientists-list {
+  display: flex;
+  flex-direction: column; 
+  gap: 15px;
+  width: 100%;
+  max-width: 650px; 
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* --- Cartas de los cientificos --- */
+.scientist-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.scientist-card h2 {
+  color: #283137; 
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-.card {
-  padding: 2em;
+/* --- contenido de la carta--- */
+.card-content {
+  display: flex;
+  flex-direction: row; 
+  gap: 15px;
+  align-items: flex-start;
 }
 
-.read-the-docs {
-  color: #888;
+/* Estilos para la imagen */
+.scientist-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; 
+  object-fit: cover;
+  flex-shrink: 0; 
+}
+
+.scientist-card li {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.scientist-card li strong {
+  font-weight: bold;
+  color: #333;
 }
